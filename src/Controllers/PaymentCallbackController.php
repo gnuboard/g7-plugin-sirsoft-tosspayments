@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Modules\Sirsoft\Ecommerce\Exceptions\PaymentAmountMismatchException;
+use Modules\Sirsoft\Ecommerce\Helpers\DeviceDetector;
 use Modules\Sirsoft\Ecommerce\Services\OrderProcessingService;
 use Plugins\Sirsoft\Tosspayments\Http\Requests\FailCallbackRequest;
 use Plugins\Sirsoft\Tosspayments\Http\Requests\SuccessCallbackRequest;
@@ -106,7 +107,7 @@ class PaymentCallbackController
                     'method' => $pgResponse['method'] ?? null,
                     'pg_raw_response' => $pgResponse,
                 ],
-                'payment_device' => $this->detectDevice($request),
+                'payment_device' => DeviceDetector::detect($request),
             ], $pgAmount);
 
             // 4. SPA 주문 완료 페이지로 redirect
@@ -233,17 +234,4 @@ class PaymentCallbackController
      * @param Request $request HTTP 요청
      * @return string 디바이스 유형 (pc/mobile)
      */
-    private function detectDevice(Request $request): string
-    {
-        $userAgent = $request->userAgent() ?? '';
-        $mobileKeywords = ['Mobile', 'Android', 'iPhone', 'iPad', 'iPod'];
-
-        foreach ($mobileKeywords as $keyword) {
-            if (stripos($userAgent, $keyword) !== false) {
-                return 'mobile';
-            }
-        }
-
-        return 'pc';
-    }
 }
