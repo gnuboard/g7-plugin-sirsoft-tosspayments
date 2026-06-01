@@ -7,7 +7,7 @@
             "name": "Modal",
             "props": {
                 "title": "$t:sirsoft-tosspayments.payment_error_title",
-                "size": "small"
+                "size": "sm"
             },
             "children": [
                 {
@@ -79,7 +79,7 @@
             "name": "Modal",
             "props": {
                 "title": "$t:sirsoft-tosspayments.payment_cancel_title",
-                "size": "small"
+                "size": "sm"
             },
             "children": [
                 {
