@@ -4,12 +4,6 @@
 형식은 [Keep a Changelog](https://keepachangelog.com/ko/1.1.0/)를 따르며,
 [Semantic Versioning](https://semver.org/lang/ko/)을 준수합니다.
 
-## [Unreleased]
-
-### Changed
-
-- 플러그인 환경설정 화면의 하단 저장 버튼이 스크롤 중에도 화면에 고정되도록 개선.
-
 ## [1.0.0-beta.3] - 2026-05-11
 
 ### Added
@@ -19,6 +13,7 @@
 ### Changed
 
 - sirsoft-ecommerce 의존성을 `>=1.0.0-beta.3` 으로 정비
+- 플러그인 환경설정 화면의 하단 저장 버튼이 스크롤 중에도 화면에 고정되도록 개선.
 
 ## [1.0.0-beta.2] - 2026-04-20
 
