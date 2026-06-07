@@ -1,4 +1,9 @@
 {
+    "editor": {
+        "data_source": {
+            "settings": "Payment Settings"
+        }
+    },
     "plugin_name": "TossPayments",
     "plugin_description": "TossPayments gateway (integrated payment window)",
     "settings": {

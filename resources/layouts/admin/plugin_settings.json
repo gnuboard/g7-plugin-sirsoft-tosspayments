@@ -12,6 +12,7 @@
     "data_sources": [
         {
             "id": "settings",
+            "label_key": "$t:sirsoft-tosspayments.editor.data_source.settings",
             "type": "api",
             "endpoint": "/api/admin/plugins/{{route.identifier}}/settings",
             "method": "GET",
