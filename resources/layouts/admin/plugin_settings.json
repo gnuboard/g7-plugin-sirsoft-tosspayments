@@ -130,7 +130,7 @@
                                         "type": "basic",
                                         "name": "Div",
                                         "props": {
-                                            "className": "flex items-center justify-between"
+                                            "className": "flex-between"
                                         },
                                         "children": [
                                             {
