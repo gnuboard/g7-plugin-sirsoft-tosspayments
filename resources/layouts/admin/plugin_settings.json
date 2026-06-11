@@ -247,7 +247,7 @@
                                                             "type": "text",
                                                             "name": "test_client_key",
                                                             "placeholder": "test_ck_...",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                                                            "className": "focus:border-transparent font-mono"
                                                         }
                                                     }
                                                 ]
@@ -301,7 +301,7 @@
                                                             "type": "password",
                                                             "name": "test_secret_key",
                                                             "placeholder": "test_sk_...",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                                                            "className": "focus:border-transparent font-mono"
                                                         }
                                                     }
                                                 ]
@@ -383,7 +383,7 @@
                                                             "type": "text",
                                                             "name": "live_client_key",
                                                             "placeholder": "live_ck_...",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                                                            "className": "focus:border-transparent font-mono"
                                                         }
                                                     }
                                                 ]
@@ -437,7 +437,7 @@
                                                             "type": "password",
                                                             "name": "live_secret_key",
                                                             "placeholder": "live_sk_...",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                                                            "className": "focus:border-transparent font-mono"
                                                         }
                                                     }
                                                 ]
@@ -527,7 +527,7 @@
                                                             "type": "text",
                                                             "name": "redirect_success_url",
                                                             "placeholder": "/shop/orders/{orderId}/complete",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                                                            "className": "focus:border-transparent"
                                                         }
                                                     }
                                                 ]
@@ -581,7 +581,7 @@
                                                             "type": "text",
                                                             "name": "redirect_fail_url",
                                                             "placeholder": "/shop/checkout",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                                                            "className": "focus:border-transparent"
                                                         }
                                                     }
                                                 ]
