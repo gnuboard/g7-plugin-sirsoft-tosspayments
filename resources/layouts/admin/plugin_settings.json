@@ -32,7 +32,7 @@
                 "dataKey": "form",
                 "trackChanges": true,
                 "props": {
-                    "className": "p-4 sm:p-6 lg:p-8 bg-gray-50 dark:bg-gray-900 min-h-screen"
+                    "className": "admin-page-content-responsive"
                 },
                 "children": [
                     {
@@ -52,7 +52,7 @@
                         "name": "Div",
                         "if": "{{_local.errors}}",
                         "props": {
-                            "className": "bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mt-6"
+                            "className": "alert-danger p-4 mt-6"
                         },
                         "children": [
                             {
@@ -78,7 +78,7 @@
                                                 "type": "basic",
                                                 "name": "H3",
                                                 "props": {
-                                                    "className": "text-sm font-medium text-red-800 dark:text-red-200"
+                                                    "className": "text-error-soft"
                                                 },
                                                 "text": "$t:admin.plugins.settings.validation_error"
                                             },
@@ -98,7 +98,7 @@
                                                         "type": "basic",
                                                         "name": "Li",
                                                         "props": {
-                                                            "className": "text-sm text-red-700 dark:text-red-300"
+                                                            "className": "grid-3col-responsive"
                                                         },
                                                         "text": "{{message}}"
                                                     }
@@ -130,7 +130,7 @@
                                         "type": "basic",
                                         "name": "Div",
                                         "props": {
-                                            "className": "flex items-center justify-between"
+                                            "className": "flex-between"
                                         },
                                         "children": [
                                             {
@@ -141,7 +141,7 @@
                                                         "type": "basic",
                                                         "name": "Label",
                                                         "props": {
-                                                            "className": "block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                                            "className": "form-label"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.test_mode"
                                                     },
@@ -149,7 +149,7 @@
                                                         "type": "basic",
                                                         "name": "P",
                                                         "props": {
-                                                            "className": "mt-1 text-xs text-gray-500 dark:text-gray-400"
+                                                            "className": "form-hint"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.test_mode_hint"
                                                     }
@@ -180,14 +180,14 @@
                                 "type": "basic",
                                 "name": "Div",
                                 "props": {
-                                    "className": "px-6 py-4 border-b border-gray-200 dark:border-gray-700"
+                                    "className": "panel-header-row"
                                 },
                                 "children": [
                                     {
                                         "type": "basic",
                                         "name": "H3",
                                         "props": {
-                                            "className": "text-base font-semibold text-gray-900 dark:text-white"
+                                            "className": "text-error-strong"
                                         },
                                         "text": "$t:sirsoft-tosspayments.settings.section_test_keys"
                                     }
@@ -205,7 +205,7 @@
                                         "type": "basic",
                                         "name": "Div",
                                         "props": {
-                                            "className": "grid grid-cols-1 lg:grid-cols-3 gap-4 items-start"
+                                            "className": "section-heading-md"
                                         },
                                         "children": [
                                             {
@@ -219,7 +219,7 @@
                                                         "type": "basic",
                                                         "name": "Label",
                                                         "props": {
-                                                            "className": "block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                                            "className": "form-label"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.test_client_key"
                                                     },
@@ -227,7 +227,7 @@
                                                         "type": "basic",
                                                         "name": "P",
                                                         "props": {
-                                                            "className": "mt-1 text-xs text-gray-500 dark:text-gray-400"
+                                                            "className": "form-hint"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.test_client_key_hint"
                                                     }
@@ -247,7 +247,7 @@
                                                             "type": "text",
                                                             "name": "test_client_key",
                                                             "placeholder": "test_ck_...",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                                                            "className": "focus:border-transparent font-mono"
                                                         }
                                                     }
                                                 ]
@@ -259,7 +259,7 @@
                                         "type": "basic",
                                         "name": "Div",
                                         "props": {
-                                            "className": "grid grid-cols-1 lg:grid-cols-3 gap-4 items-start"
+                                            "className": "section-heading-md"
                                         },
                                         "children": [
                                             {
@@ -273,7 +273,7 @@
                                                         "type": "basic",
                                                         "name": "Label",
                                                         "props": {
-                                                            "className": "block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                                            "className": "form-label"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.test_secret_key"
                                                     },
@@ -281,7 +281,7 @@
                                                         "type": "basic",
                                                         "name": "P",
                                                         "props": {
-                                                            "className": "mt-1 text-xs text-gray-500 dark:text-gray-400"
+                                                            "className": "form-hint"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.test_secret_key_hint"
                                                     }
@@ -301,7 +301,7 @@
                                                             "type": "password",
                                                             "name": "test_secret_key",
                                                             "placeholder": "test_sk_...",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                                                            "className": "focus:border-transparent font-mono"
                                                         }
                                                     }
                                                 ]
@@ -324,14 +324,14 @@
                                 "type": "basic",
                                 "name": "Div",
                                 "props": {
-                                    "className": "px-6 py-4 border-b border-gray-200 dark:border-gray-700"
+                                    "className": "panel-header-row"
                                 },
                                 "children": [
                                     {
                                         "type": "basic",
                                         "name": "H3",
                                         "props": {
-                                            "className": "text-base font-semibold text-gray-900 dark:text-white"
+                                            "className": "text-error-strong"
                                         },
                                         "text": "$t:sirsoft-tosspayments.settings.section_live_keys"
                                     }
@@ -349,7 +349,7 @@
                                         "type": "basic",
                                         "name": "Div",
                                         "props": {
-                                            "className": "grid grid-cols-1 lg:grid-cols-3 gap-4 items-start"
+                                            "className": "section-heading-md"
                                         },
                                         "children": [
                                             {
@@ -363,7 +363,7 @@
                                                         "type": "basic",
                                                         "name": "Label",
                                                         "props": {
-                                                            "className": "block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                                            "className": "form-label"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.live_client_key"
                                                     }
@@ -383,7 +383,7 @@
                                                             "type": "text",
                                                             "name": "live_client_key",
                                                             "placeholder": "live_ck_...",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                                                            "className": "focus:border-transparent font-mono"
                                                         }
                                                     }
                                                 ]
@@ -395,7 +395,7 @@
                                         "type": "basic",
                                         "name": "Div",
                                         "props": {
-                                            "className": "grid grid-cols-1 lg:grid-cols-3 gap-4 items-start"
+                                            "className": "section-heading-md"
                                         },
                                         "children": [
                                             {
@@ -409,7 +409,7 @@
                                                         "type": "basic",
                                                         "name": "Label",
                                                         "props": {
-                                                            "className": "block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                                            "className": "form-label"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.live_secret_key"
                                                     },
@@ -417,7 +417,7 @@
                                                         "type": "basic",
                                                         "name": "P",
                                                         "props": {
-                                                            "className": "mt-1 text-xs text-gray-500 dark:text-gray-400"
+                                                            "className": "form-hint"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.live_secret_key_hint"
                                                     }
@@ -437,7 +437,7 @@
                                                             "type": "password",
                                                             "name": "live_secret_key",
                                                             "placeholder": "live_sk_...",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                                                            "className": "focus:border-transparent font-mono"
                                                         }
                                                     }
                                                 ]
@@ -460,14 +460,14 @@
                                 "type": "basic",
                                 "name": "Div",
                                 "props": {
-                                    "className": "px-6 py-4 border-b border-gray-200 dark:border-gray-700"
+                                    "className": "panel-header-row"
                                 },
                                 "children": [
                                     {
                                         "type": "basic",
                                         "name": "H3",
                                         "props": {
-                                            "className": "text-base font-semibold text-gray-900 dark:text-white"
+                                            "className": "text-error-strong"
                                         },
                                         "text": "$t:sirsoft-tosspayments.settings.section_redirect"
                                     }
@@ -485,7 +485,7 @@
                                         "type": "basic",
                                         "name": "Div",
                                         "props": {
-                                            "className": "grid grid-cols-1 lg:grid-cols-3 gap-4 items-start"
+                                            "className": "section-heading-md"
                                         },
                                         "children": [
                                             {
@@ -499,7 +499,7 @@
                                                         "type": "basic",
                                                         "name": "Label",
                                                         "props": {
-                                                            "className": "block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                                            "className": "form-label"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.redirect_success_url"
                                                     },
@@ -507,7 +507,7 @@
                                                         "type": "basic",
                                                         "name": "P",
                                                         "props": {
-                                                            "className": "mt-1 text-xs text-gray-500 dark:text-gray-400"
+                                                            "className": "form-hint"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.redirect_success_url_hint"
                                                     }
@@ -527,7 +527,7 @@
                                                             "type": "text",
                                                             "name": "redirect_success_url",
                                                             "placeholder": "/shop/orders/{orderId}/complete",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                                                            "className": "focus:border-transparent"
                                                         }
                                                     }
                                                 ]
@@ -539,7 +539,7 @@
                                         "type": "basic",
                                         "name": "Div",
                                         "props": {
-                                            "className": "grid grid-cols-1 lg:grid-cols-3 gap-4 items-start"
+                                            "className": "section-heading-md"
                                         },
                                         "children": [
                                             {
@@ -553,7 +553,7 @@
                                                         "type": "basic",
                                                         "name": "Label",
                                                         "props": {
-                                                            "className": "block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                                            "className": "form-label"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.redirect_fail_url"
                                                     },
@@ -561,7 +561,7 @@
                                                         "type": "basic",
                                                         "name": "P",
                                                         "props": {
-                                                            "className": "mt-1 text-xs text-gray-500 dark:text-gray-400"
+                                                            "className": "form-hint"
                                                         },
                                                         "text": "$t:sirsoft-tosspayments.settings.redirect_fail_url_hint"
                                                     }
@@ -581,7 +581,7 @@
                                                             "type": "text",
                                                             "name": "redirect_fail_url",
                                                             "placeholder": "/shop/checkout",
-                                                            "className": "w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                                                            "className": "focus:border-transparent"
                                                         }
                                                     }
                                                 ]
@@ -597,7 +597,7 @@
                         "type": "basic",
                         "name": "Div",
                         "props": {
-                            "className": "sticky bottom-0 z-10 flex justify-end items-center gap-3 mt-6 px-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg"
+                            "className": "sticky-footer-buttons"
                         },
                         "children": [
                             {
@@ -605,7 +605,7 @@
                                 "type": "basic",
                                 "name": "Button",
                                 "props": {
-                                    "className": "px-4 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 font-medium transition-colors"
+                                    "className": "btn btn-secondary"
                                 },
                                 "actions": [
                                     {
@@ -630,7 +630,7 @@
                                 "name": "Button",
                                 "props": {
                                     "disabled": "{{!_local.hasChanges || _local.isSaving}}",
-                                    "className": "flex items-center gap-1.5 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                    "className": "btn btn-primary flex-center gap-1.5"
                                 },
                                 "actions": [
                                     {
@@ -704,7 +704,7 @@
                                         "if": "{{_local.isSaving}}",
                                         "props": {
                                             "name": "spinner",
-                                            "className": "w-4 h-4 animate-spin"
+                                            "className": "spinner-sm"
                                         }
                                     },
                                     {
