@@ -38,7 +38,6 @@ class PaymentRefundListener implements HookListenerInterface
      * 기본 핸들러 (미사용)
      *
      * @param  mixed  ...$args  인수
-     * @return void
      */
     public function handle(...$args): void
     {
@@ -81,6 +80,7 @@ class PaymentRefundListener implements HookListenerInterface
             $apiService = $this->getApiService();
 
             $cancelReason = $reason ?? __('sirsoft-tosspayments::messages.refund.default_reason');
+            // $refundAmount 는 코어가 결제 통화(order_currency)로 환산해 전달한 실환불액이다.
             $cancelAmount = (int) $refundAmount;
 
             $response = $apiService->cancelPayment($paymentKey, $cancelReason, $cancelAmount);
@@ -121,8 +121,6 @@ class PaymentRefundListener implements HookListenerInterface
 
     /**
      * API 서비스 인스턴스를 가져옵니다.
-     *
-     * @return TossPaymentsApiService
      */
     protected function getApiService(): TossPaymentsApiService
     {
