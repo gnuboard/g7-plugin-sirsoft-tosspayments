@@ -1,5 +1,6 @@
 {
     "extension_point": "shop_checkout_extensions",
+    "priority": 100,
     "modals": [
         {
             "id": "tosspayments_payment_error_modal",
@@ -45,11 +46,6 @@
                         {
                             "type": "basic",
                             "name": "Button",
-                            "props": {
-                                "type": "button",
-                                "className": "px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                            },
-                            "text": "$t:common.confirm",
                             "actions": [
                                 {
                                     "type": "click",
@@ -66,13 +62,17 @@
                                         "id": "tosspayments_payment_error_modal"
                                     }
                                 }
-                            ]
+                            ],
+                            "props": {
+                                "type": "button",
+                                "className": "px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                            },
+                            "text": "$t:common.confirm"
                         }
                     ]
                 }
             ]
-        }
-        ,
+        },
         {
             "id": "tosspayments_payment_cancel_modal",
             "type": "composite",
@@ -117,11 +117,6 @@
                         {
                             "type": "basic",
                             "name": "Button",
-                            "props": {
-                                "type": "button",
-                                "className": "px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                            },
-                            "text": "$t:common.confirm",
                             "actions": [
                                 {
                                     "type": "click",
@@ -130,12 +125,16 @@
                                         "id": "tosspayments_payment_cancel_modal"
                                     }
                                 }
-                            ]
+                            ],
+                            "props": {
+                                "type": "button",
+                                "className": "px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                            },
+                            "text": "$t:common.confirm"
                         }
                     ]
                 }
             ]
         }
-    ],
-    "priority": 100
+    ]
 }

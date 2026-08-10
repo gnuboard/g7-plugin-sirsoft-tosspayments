@@ -1,9 +1,6 @@
 {
     "version": "1.0.0",
     "layout_name": "plugin_settings",
-    "permissions": [
-        "core.plugins.update"
-    ],
     "extends": "_admin_base",
     "meta": {
         "title": "$t:sirsoft-tosspayments.settings.title",
@@ -21,6 +18,9 @@
             "initLocal": "form",
             "refetchOnMount": true
         }
+    ],
+    "permissions": [
+        "core.plugins.update"
     ],
     "slots": {
         "content": [
@@ -86,12 +86,12 @@
                                                 "type": "basic",
                                                 "name": "Ul",
                                                 "if": "{{typeof _local.errors === 'object' && Object.keys(_local.errors).length > 0}}",
-                                                "props": {
-                                                    "className": "mt-2 list-disc list-inside space-y-1"
-                                                },
                                                 "iteration": {
                                                     "source": "Object.entries(_local.errors ?? {}).flatMap(([field, messages]) => Array.isArray(messages) ? messages : [messages])",
                                                     "item_var": "message"
+                                                },
+                                                "props": {
+                                                    "className": "mt-2 list-disc list-inside space-y-1"
                                                 },
                                                 "children": [
                                                     {
@@ -692,15 +692,15 @@
                                                 "id": "method_checkbox_grid",
                                                 "type": "basic",
                                                 "name": "Div",
-                                                "props": {
-                                                    "className": "grid grid-cols-3 gap-3"
-                                                },
                                                 "responsive": {
                                                     "portable": {
                                                         "props": {
                                                             "className": "grid grid-cols-1 gap-2"
                                                         }
                                                     }
+                                                },
+                                                "props": {
+                                                    "className": "grid grid-cols-3 gap-3"
                                                 },
                                                 "children": [
                                                     {
@@ -713,11 +713,6 @@
                                                             {
                                                                 "type": "basic",
                                                                 "name": "Checkbox",
-                                                                "props": {
-                                                                    "name": "method_card",
-                                                                    "autoBinding": false,
-                                                                    "checked": "{{!!_local.form?.method_card}}"
-                                                                },
                                                                 "actions": [
                                                                     {
                                                                         "type": "change",
@@ -728,7 +723,12 @@
                                                                             "hasChanges": true
                                                                         }
                                                                     }
-                                                                ]
+                                                                ],
+                                                                "props": {
+                                                                    "name": "method_card",
+                                                                    "autoBinding": false,
+                                                                    "checked": "{{!!_local.form?.method_card}}"
+                                                                }
                                                             },
                                                             {
                                                                 "type": "basic",
@@ -747,11 +747,6 @@
                                                             {
                                                                 "type": "basic",
                                                                 "name": "Checkbox",
-                                                                "props": {
-                                                                    "name": "method_virtual_account",
-                                                                    "autoBinding": false,
-                                                                    "checked": "{{!!_local.form?.method_virtual_account}}"
-                                                                },
                                                                 "actions": [
                                                                     {
                                                                         "type": "change",
@@ -762,7 +757,12 @@
                                                                             "hasChanges": true
                                                                         }
                                                                     }
-                                                                ]
+                                                                ],
+                                                                "props": {
+                                                                    "name": "method_virtual_account",
+                                                                    "autoBinding": false,
+                                                                    "checked": "{{!!_local.form?.method_virtual_account}}"
+                                                                }
                                                             },
                                                             {
                                                                 "type": "basic",
@@ -781,11 +781,6 @@
                                                             {
                                                                 "type": "basic",
                                                                 "name": "Checkbox",
-                                                                "props": {
-                                                                    "name": "method_transfer",
-                                                                    "autoBinding": false,
-                                                                    "checked": "{{!!_local.form?.method_transfer}}"
-                                                                },
                                                                 "actions": [
                                                                     {
                                                                         "type": "change",
@@ -796,7 +791,12 @@
                                                                             "hasChanges": true
                                                                         }
                                                                     }
-                                                                ]
+                                                                ],
+                                                                "props": {
+                                                                    "name": "method_transfer",
+                                                                    "autoBinding": false,
+                                                                    "checked": "{{!!_local.form?.method_transfer}}"
+                                                                }
                                                             },
                                                             {
                                                                 "type": "basic",
@@ -815,11 +815,6 @@
                                                             {
                                                                 "type": "basic",
                                                                 "name": "Checkbox",
-                                                                "props": {
-                                                                    "name": "method_mobile_phone",
-                                                                    "autoBinding": false,
-                                                                    "checked": "{{!!_local.form?.method_mobile_phone}}"
-                                                                },
                                                                 "actions": [
                                                                     {
                                                                         "type": "change",
@@ -830,7 +825,12 @@
                                                                             "hasChanges": true
                                                                         }
                                                                     }
-                                                                ]
+                                                                ],
+                                                                "props": {
+                                                                    "name": "method_mobile_phone",
+                                                                    "autoBinding": false,
+                                                                    "checked": "{{!!_local.form?.method_mobile_phone}}"
+                                                                }
                                                             },
                                                             {
                                                                 "type": "basic",
@@ -849,11 +849,6 @@
                                                             {
                                                                 "type": "basic",
                                                                 "name": "Checkbox",
-                                                                "props": {
-                                                                    "name": "method_tosspay",
-                                                                    "autoBinding": false,
-                                                                    "checked": "{{!!_local.form?.method_tosspay}}"
-                                                                },
                                                                 "actions": [
                                                                     {
                                                                         "type": "change",
@@ -864,7 +859,12 @@
                                                                             "hasChanges": true
                                                                         }
                                                                     }
-                                                                ]
+                                                                ],
+                                                                "props": {
+                                                                    "name": "method_tosspay",
+                                                                    "autoBinding": false,
+                                                                    "checked": "{{!!_local.form?.method_tosspay}}"
+                                                                }
                                                             },
                                                             {
                                                                 "type": "basic",
@@ -883,11 +883,6 @@
                                                             {
                                                                 "type": "basic",
                                                                 "name": "Checkbox",
-                                                                "props": {
-                                                                    "name": "method_kakaopay",
-                                                                    "autoBinding": false,
-                                                                    "checked": "{{!!_local.form?.method_kakaopay}}"
-                                                                },
                                                                 "actions": [
                                                                     {
                                                                         "type": "change",
@@ -898,7 +893,12 @@
                                                                             "hasChanges": true
                                                                         }
                                                                     }
-                                                                ]
+                                                                ],
+                                                                "props": {
+                                                                    "name": "method_kakaopay",
+                                                                    "autoBinding": false,
+                                                                    "checked": "{{!!_local.form?.method_kakaopay}}"
+                                                                }
                                                             },
                                                             {
                                                                 "type": "basic",
@@ -917,11 +917,6 @@
                                                             {
                                                                 "type": "basic",
                                                                 "name": "Checkbox",
-                                                                "props": {
-                                                                    "name": "method_naverpay",
-                                                                    "autoBinding": false,
-                                                                    "checked": "{{!!_local.form?.method_naverpay}}"
-                                                                },
                                                                 "actions": [
                                                                     {
                                                                         "type": "change",
@@ -932,7 +927,12 @@
                                                                             "hasChanges": true
                                                                         }
                                                                     }
-                                                                ]
+                                                                ],
+                                                                "props": {
+                                                                    "name": "method_naverpay",
+                                                                    "autoBinding": false,
+                                                                    "checked": "{{!!_local.form?.method_naverpay}}"
+                                                                }
                                                             },
                                                             {
                                                                 "type": "basic",
@@ -951,11 +951,6 @@
                                                             {
                                                                 "type": "basic",
                                                                 "name": "Checkbox",
-                                                                "props": {
-                                                                    "name": "method_payco",
-                                                                    "autoBinding": false,
-                                                                    "checked": "{{!!_local.form?.method_payco}}"
-                                                                },
                                                                 "actions": [
                                                                     {
                                                                         "type": "change",
@@ -966,7 +961,12 @@
                                                                             "hasChanges": true
                                                                         }
                                                                     }
-                                                                ]
+                                                                ],
+                                                                "props": {
+                                                                    "name": "method_payco",
+                                                                    "autoBinding": false,
+                                                                    "checked": "{{!!_local.form?.method_payco}}"
+                                                                }
                                                             },
                                                             {
                                                                 "type": "basic",
@@ -985,11 +985,6 @@
                                                             {
                                                                 "type": "basic",
                                                                 "name": "Checkbox",
-                                                                "props": {
-                                                                    "name": "method_samsungpay",
-                                                                    "autoBinding": false,
-                                                                    "checked": "{{!!_local.form?.method_samsungpay}}"
-                                                                },
                                                                 "actions": [
                                                                     {
                                                                         "type": "change",
@@ -1000,7 +995,12 @@
                                                                             "hasChanges": true
                                                                         }
                                                                     }
-                                                                ]
+                                                                ],
+                                                                "props": {
+                                                                    "name": "method_samsungpay",
+                                                                    "autoBinding": false,
+                                                                    "checked": "{{!!_local.form?.method_samsungpay}}"
+                                                                }
                                                             },
                                                             {
                                                                 "type": "basic",
@@ -1110,9 +1110,18 @@
                                                 "props": {
                                                     "name": "vbank_cash_receipt_type",
                                                     "options": [
-                                                        { "value": "", "label": "$t:sirsoft-tosspayments.settings.vbank_cash_receipt_none" },
-                                                        { "value": "소득공제", "label": "$t:sirsoft-tosspayments.settings.vbank_cash_receipt_income" },
-                                                        { "value": "지출증빙", "label": "$t:sirsoft-tosspayments.settings.vbank_cash_receipt_expense" }
+                                                        {
+                                                            "value": "",
+                                                            "label": "$t:sirsoft-tosspayments.settings.vbank_cash_receipt_none"
+                                                        },
+                                                        {
+                                                            "value": "소득공제",
+                                                            "label": "$t:sirsoft-tosspayments.settings.vbank_cash_receipt_income"
+                                                        },
+                                                        {
+                                                            "value": "지출증빙",
+                                                            "label": "$t:sirsoft-tosspayments.settings.vbank_cash_receipt_expense"
+                                                        }
                                                     ]
                                                 }
                                             },
@@ -1145,9 +1154,18 @@
                                                 "props": {
                                                     "name": "use_escrow",
                                                     "options": [
-                                                        { "value": "off", "label": "$t:sirsoft-tosspayments.settings.use_escrow_off" },
-                                                        { "value": "on", "label": "$t:sirsoft-tosspayments.settings.use_escrow_on" },
-                                                        { "value": "buyer_choice", "label": "$t:sirsoft-tosspayments.settings.use_escrow_buyer_choice" }
+                                                        {
+                                                            "value": "off",
+                                                            "label": "$t:sirsoft-tosspayments.settings.use_escrow_off"
+                                                        },
+                                                        {
+                                                            "value": "on",
+                                                            "label": "$t:sirsoft-tosspayments.settings.use_escrow_on"
+                                                        },
+                                                        {
+                                                            "value": "buyer_choice",
+                                                            "label": "$t:sirsoft-tosspayments.settings.use_escrow_buyer_choice"
+                                                        }
                                                     ]
                                                 }
                                             },
@@ -1161,9 +1179,9 @@
                                             },
                                             {
                                                 "id": "escrow_operation_notice",
-                                                "if": "{{_local.form?.use_escrow !== 'off'}}",
                                                 "type": "basic",
                                                 "name": "Div",
+                                                "if": "{{_local.form?.use_escrow !== 'off'}}",
                                                 "props": {
                                                     "className": "mt-2 rounded-md bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 p-3 space-y-1"
                                                 },
@@ -1224,15 +1242,15 @@
                                             {
                                                 "type": "basic",
                                                 "name": "Div",
-                                                "props": {
-                                                    "className": "flex items-center gap-2"
-                                                },
                                                 "responsive": {
                                                     "portable": {
                                                         "props": {
                                                             "className": "flex flex-col items-stretch gap-2"
                                                         }
                                                     }
+                                                },
+                                                "props": {
+                                                    "className": "flex items-center gap-2"
                                                 },
                                                 "children": [
                                                     {
@@ -1247,10 +1265,6 @@
                                                         "id": "webhook_copy_button",
                                                         "type": "basic",
                                                         "name": "Button",
-                                                        "props": {
-                                                            "type": "button",
-                                                            "className": "btn btn-secondary btn-sm flex-shrink-0"
-                                                        },
                                                         "responsive": {
                                                             "portable": {
                                                                 "props": {
@@ -1266,17 +1280,19 @@
                                                                 "params": {
                                                                     "text": "/plugins/sirsoft-tosspayments/webhook/deposit"
                                                                 },
-                                                                "onSuccess": [
-                                                                    {
-                                                                        "handler": "toast",
-                                                                        "params": {
-                                                                            "type": "success",
-                                                                            "message": "$t:sirsoft-tosspayments.settings.webhook_url_copied"
-                                                                        }
+                                                                "onSuccess": {
+                                                                    "handler": "toast",
+                                                                    "params": {
+                                                                        "type": "success",
+                                                                        "message": "$t:sirsoft-tosspayments.settings.webhook_url_copied"
                                                                     }
-                                                                ]
+                                                                }
                                                             }
                                                         ],
+                                                        "props": {
+                                                            "type": "button",
+                                                            "className": "btn btn-secondary btn-sm flex-shrink-0"
+                                                        },
                                                         "children": [
                                                             {
                                                                 "type": "basic",
@@ -1352,9 +1368,6 @@
                                 "id": "cancel_button",
                                 "type": "basic",
                                 "name": "Button",
-                                "props": {
-                                    "className": "btn btn-secondary"
-                                },
                                 "actions": [
                                     {
                                         "type": "click",
@@ -1364,6 +1377,9 @@
                                         }
                                     }
                                 ],
+                                "props": {
+                                    "className": "btn btn-secondary"
+                                },
                                 "children": [
                                     {
                                         "type": "basic",
@@ -1376,10 +1392,6 @@
                                 "id": "save_button",
                                 "type": "basic",
                                 "name": "Button",
-                                "props": {
-                                    "disabled": "{{!_local.hasChanges || _local.isSaving}}",
-                                    "className": "btn btn-primary flex-center gap-1.5"
-                                },
                                 "actions": [
                                     {
                                         "type": "click",
@@ -1395,8 +1407,8 @@
                                             },
                                             {
                                                 "handler": "apiCall",
-                                                "auth_required": true,
                                                 "target": "/api/admin/plugins/{{route.identifier}}/settings",
+                                                "auth_required": true,
                                                 "params": {
                                                     "method": "PUT",
                                                     "body": "{{_local.form}}"
@@ -1430,14 +1442,14 @@
                                                         "params": {
                                                             "target": "local",
                                                             "isSaving": false,
-                                                            "errors": "{{$error.errors}}"
+                                                            "errors": "{{error.errors}}"
                                                         }
                                                     },
                                                     {
                                                         "handler": "toast",
                                                         "params": {
                                                             "type": "error",
-                                                            "message": "{{error.message ?? '$t:admin.plugins.settings.save_error'}}"
+                                                            "message": "$t:admin.plugins.settings.save_error"
                                                         }
                                                     }
                                                 ]
@@ -1445,6 +1457,10 @@
                                         ]
                                     }
                                 ],
+                                "props": {
+                                    "disabled": "{{!_local.hasChanges || _local.isSaving}}",
+                                    "className": "btn btn-primary flex-center gap-1.5"
+                                },
                                 "children": [
                                     {
                                         "type": "basic",
